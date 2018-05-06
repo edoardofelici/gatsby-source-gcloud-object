@@ -27,7 +27,7 @@ const GCloudObject = (
 })
 
 const getObjectURL = (o) => {
-    return `${o.baseUrl}/${o.bucket}${o.name}`
+    return `${o.baseUrl}/${o.bucket}/${o.name}`
 }
 
 const createRemoteGCloudNode = async ({
@@ -81,10 +81,10 @@ exports.sourceNodes = async (
 
     //let's get all the files in the target bucket and let's create a node GCloudObject
     //linked to a RemoteFileNode
-    const objects = await gcloudCmd.getAllObjects(project, bucket, prefix).map(o => GCloudObject(`${https}://${domain}`, o.metadata))
+    const objects = await gcloudCmd.getAllObjects(project, bucket, prefix).map(o => GCloudObject(`${protocol}://${domain}`, o.metadata))
     //for each object, let's tell gatsby to fetch the data remotely
     await Promise.all(objects.map(async objectData => {
-        const fileNode = createRemoteGCloudNode({
+        const fileNode = await createRemoteGCloudNode({
             url: getObjectURL(objectData),
             store,
             cache,

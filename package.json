@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-gcloud-object",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "GatsbyJS plugin to source public objects from google cloud storage",
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
