@@ -11,7 +11,7 @@ You can:
 Install
 -------
 
-  npm install --save gatsby-source-gcloud-object
+`npm install --save gatsby-source-gcloud-object`
 
 
 How to use
@@ -19,6 +19,7 @@ How to use
 
 Add the following to your gatsby-node.js:
 
+```
 plugins: [
     {
       resolve: 'gatsby-source-gcloud-object',
@@ -31,10 +32,11 @@ plugins: [
       }
     }
 ]
+```
 
 GraphQL query
 ------------
-
+```
 export const GCloudObjectsQuery = graphql`
 query GCloudObjectsQuery{
   allGCloudObject{
@@ -56,5 +58,6 @@ query GCloudObjectsQuery{
   }
 }
 `
+```
 
 
