@@ -53,11 +53,32 @@ query GCloudObjectsQuery{
         etag
         
         absolutePath
+        localFile
       }
     }
   }
 }
 `
+```
+
+The localFile element is of particular interest as it references a `file` object, as described by 
+https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-filesystem. This means that any other plugin 
+that works off `gatsby-source-filesystem` can be hooked in and used via localFile. 
+
+Example using `gatsby-image` plugin:
+
+```
+export const GCloudObjectsQueryWithJson(name: {eq: "some-bucket-folder/some-data.json"}){
+  localFile{
+    childImageSharp{
+      resolutions(width: 500, height: 500){
+        width
+        height
+        src
+      }
+    }
+  }
+}
 ```
 
 
