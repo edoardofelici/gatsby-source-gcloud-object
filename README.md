@@ -68,7 +68,7 @@ that works off `gatsby-source-filesystem` can be hooked in and used via localFil
 Example using `gatsby-image` plugin:
 
 ```
-export const GCloudObjectsQueryWithJson(name: {eq: "some-bucket-folder/some-data.json"}){
+gCloudObject(name: {eq: "some-bucket-folder/some-data.json"}){
   localFile{
     childImageSharp{
       resolutions(width: 500, height: 500){
