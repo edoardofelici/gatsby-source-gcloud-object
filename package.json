@@ -1,6 +1,11 @@
 {
   "name": "gatsby-source-gcloud-object",
-  "version": "1.0.0",
+  "version": "0.9.1",
+  "homepage": "https://github.com/edoardofelici/gatsby-source-gcloud-object#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edoardofelici/gatsby-source-gcloud-object"
+  },
   "description": "GatsbyJS plugin to source public objects from google cloud storage",
   "scripts": {
     "build": "babel src --out-dir . --ignore __tests__",
@@ -14,7 +19,7 @@
     "gcloud-storage"
   ],
   "author": "Edoardo Felici <ef@keplercube.com>",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@google-cloud/storage": "^1.6.0",
     "gatsby-source-filesystem": "^1.5.35"
