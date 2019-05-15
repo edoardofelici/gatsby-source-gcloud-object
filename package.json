@@ -16,7 +16,8 @@
     "gatsbyjs",
     "gatsbyjs-plugin",
     "gatsby",
-    "gcloud-storage"
+    "gcloud-storage",
+    "gatsby-plugin"
   ],
   "author": "Edoardo Felici <ef@keplercube.com>",
   "license": "MIT",
